@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Homeinspect</title>
+  <title>HomeInspect</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+<div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">NWInspect</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../getting-started">Contact</a>
+        </li>
+        <li>
+          <a href="../css">About</a>
+        </li>
+        <li class="active">
+          <a href="../components">Services</a>
+        </li>
+        <li class="active">
+          <a href="../components">FAQ</a>
+        </li>
+        <li class="active">
+          <a href="../components">Blog</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<%= yield %>
+<div class="bs-docs-header" id="content">
+    <div class="container">
+        <div class="pull-right"><%= image_tag("northwest-home-inspection-logo.jpg", :alt => "northwest home inspection logo") %></div>
+        <h1>Northwest Premier Home Inspections, LLC</h1>
+       <p>Licensed home inspections throughout the Puget Sound, serving King County, Pierce County, and Snohomish County. Our inspectors average 15 years of residential construction experience. Let our experience provide peace of mind for your biggest purchase.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-1">
+        	
+		</div>
+        <div class="col-md-9" role="main">
+        	<%= yield %>
+		</div>
+    	<div class="col-md-2 phone-number">
+    		<h3>To schedule an inspection or simply ask a question, please call 206-462-8483</h3>
+    	</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="footer">
+				<em>Copywrite <%= Time.now.year %></em>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 </body>
 </html>

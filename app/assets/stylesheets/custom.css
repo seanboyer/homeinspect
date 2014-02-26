@@ -1,0 +1,32 @@
+.bs-docs-header {
+	background-color: #505050;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	color: black;
+}
+
+.navbar a {
+	color: black;
+}
+
+.navbar-header a {
+	color: black;
+}
+
+.bs-docs-container {
+	background-color: #78AB46;
+	padding-bottom: 300px;
+}
+
+.phone-number {
+	background-color: #9DB68C;
+}
+
+.footer {
+	color: grey;
+}
