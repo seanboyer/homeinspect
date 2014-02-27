@@ -1,0 +1,27 @@
+<h1>How may we help you?</h1>
+
+<div class="row">
+	<div class="col-md-6">
+		<%= simple_form_for(@contact, html: {class: "form-horizontal"}) do |f| %>
+		  <% if @contact.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+		      <ul>
+		      <% @contact.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+
+		<%= f.input :name, :input_html => {:maxlength =>2,:style=> 'width: 400px'} %>
+		<%= f.input :email, :input_html => {:maxlength =>2,:style=> 'width: 400px'} %>
+		<%= f.input :phone, :input_html => {:maxlength =>2,:style=> 'width: 400px'} %>
+		<%= f.input :additional_information, :input_html => {:maxlength =>2,:style=> 'width: 400px; height: 200px'} %>
+		  <div class="form-actions">
+		    <%= f.button :submit %>
+		  </div>
+		<% end %>
+	</div>
+</div>

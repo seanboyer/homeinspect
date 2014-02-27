@@ -1,9 +1,9 @@
 Homeinspect::Application.routes.draw do
   get "pages/home"
   get "pages/about"
-  get "contact/index"
-  get "contact/new"
-  post "contact/create"
+  get "pages/confirmation"
+  
+  resources :contacts
 
   root to: "pages#home"
 

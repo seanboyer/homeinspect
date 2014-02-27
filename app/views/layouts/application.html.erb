@@ -21,10 +21,10 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="../getting-started">Contact</a>
+          <%= link_to "Contact", new_contact_path %>          
         </li>
         <li>
-          <a href="../css">About</a>
+          <%= link_to "About", pages_about_path %>
         </li>
         <li class="active">
           <a href="../components">Services</a>
@@ -42,9 +42,9 @@
 
 <div class="bs-docs-header" id="content">
     <div class="container">
-        <div class="pull-right"><%= image_tag("northwest-home-inspection-logo.jpg", :alt => "northwest home inspection logo") %></div>
+        <div class="pull-right logo-pic"><%= image_tag("northwest-home-inspection-logo.jpg", :alt => "northwest home inspection logo") %></div>
         <h1>Northwest Premier Home Inspections, LLC</h1>
-       <p>Licensed home inspections throughout the Puget Sound, serving King County, Pierce County, and Snohomish County. Our inspectors average 15 years of residential construction experience. Let our experience provide peace of mind for your biggest purchase.</p>
+       <p>Trust your home inspection to a team which averages 15 years of residential construction experience.  Our licensed home inspectors provide inspections throughout the Puget Sound, serving King, Pierce, and Snohomish Counties. Let our experience provide peace of mind for your biggest purchase.</p>
     </div>
 </div>
 
