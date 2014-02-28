@@ -7,4 +7,10 @@ class PagesController < ApplicationController
 
   def confirmation
   end
+
+  def faq
+  end
+
+  def services
+  end
 end

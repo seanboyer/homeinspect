@@ -1,7 +1,11 @@
 Homeinspect::Application.routes.draw do
+  resources :blogs
+
   get "pages/home"
   get "pages/about"
   get "pages/confirmation"
+  get "pages/faq"
+  get "pages/services"
   
   resources :contacts
 

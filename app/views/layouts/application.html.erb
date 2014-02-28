@@ -16,24 +16,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../" class="navbar-brand">NWInspect</a>
+      
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li>
+      	<li class="nav-link">
+			<a href="../" class="navbar-brand">NWInspect</a>
+		</li>
+        <li class="nav-link">
           <%= link_to "Contact", new_contact_path %>          
         </li>
-        <li>
+        <li class="nav-link">
+          <%= link_to "Services", pages_services_path %>
+        </li>
+        <li class="nav-link">
           <%= link_to "About", pages_about_path %>
         </li>
-        <li class="active">
-          <a href="../components">Services</a>
+        <li class="nav-link">
+          <%= link_to "FAQ", pages_faq_path %>
         </li>
-        <li class="active">
-          <a href="../components">FAQ</a>
-        </li>
-        <li class="active">
-          <a href="../components">Blog</a>
+        <li class="nav-link">
+          <%= link_to "Blog", blogs_path %>
         </li>
       </ul>
     </nav>
@@ -44,7 +47,7 @@
     <div class="container">
         <div class="pull-right logo-pic"><%= image_tag("northwest-home-inspection-logo.jpg", :alt => "northwest home inspection logo") %></div>
         <h1>Northwest Premier Home Inspections, LLC</h1>
-       <p>Trust your home inspection to a team which averages 15 years of residential construction experience.  Our licensed home inspectors provide inspections throughout the Puget Sound, serving King, Pierce, and Snohomish Counties. Let our experience provide peace of mind for your biggest purchase.</p>
+       <p>Trust your home inspection to a team which averages 15 years of residential construction experience.  Our licensed home inspectors provide inspections throughout the Puget Sound, serving King, Pierce, and Snohomish Counties. Let our experience provide peace of mind for your most important purchase.</p>
     </div>
 </div>
 
@@ -71,6 +74,12 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $.backstretch(["<%= asset_path 'Summit-House-Canada.jpg' %>"]);
+	});
+</script>
 
 
 </body>

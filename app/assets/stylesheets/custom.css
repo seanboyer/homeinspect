@@ -7,19 +7,22 @@
 
 .navbar {
 	margin-bottom: 0px;
-	color: black;
 }
 
-.navbar a {
-	color: black;
+li.nav-link a {
+	color: white;	
 }
 
 .navbar-header a {
-	color: black;
+	color: white;
 }
 
 .bs-docs-container {
-	background-color: #78AB46;
+	background: rgb(120, 171, 70); /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(120, 171, 70, .95);
+	/*background-color: #78AB46;
+	opacity:0.6;*/
 	padding-bottom: 300px;
 }
 
@@ -76,11 +79,20 @@ label.collection_radio_buttons {
   margin-left: 120px;
 }
 
-#contact_name #contact_phone #contact_email {
-	width: 200px;
+
+
+.section-heading {
+	padding-bottom: 30px;
 }
 
-#contact_additional_information {
-	width: 200px;
+.question {
+	padding-left: 10px;
+	font-size: 1.5em;
+	font-style: bold;
 }
 
+.answer {
+	padding-left: 20px;
+	font-style: italic;
+	padding-bottom: 20px;
+}
