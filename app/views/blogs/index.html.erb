@@ -1,31 +1,24 @@
-<h1>NPHI Blog</h1>
+<h1>NPHI Blog:</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.author %></td>
-        <td><%= sanitize(blog.content) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="blog-title">
+        <h3><%= link_to blog.title, blog_path(blog) %></h3>
+      </div>
+
+      <div class="blog-author">
+        <em>Posted by: <%= blog.author + " - " + blog.created_at.strftime("%b #{blog.created_at.day.ordinalize}, %Y") %></em>
+      </div>
+
+      <hr class="blog-hr" />
+
+      <div class="blog-content">
+        <%= sanitize(blog.content) %>
+      </div>
+
+      <td><%= link_to 'Show', blog %></td>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<br />

@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+<div class="blog-title">
+  <h3><%= @blog.title %></h3>
+</div>
 
-<p>
-  <strong>Author:</strong>
-  <%= @blog.author %>
-</p>
+<div class="blog-author">
+  <em>Posted by: <%= @blog.author + " - " + @blog.created_at.strftime("%b #{@blog.created_at.day.ordinalize}, %Y") %></em>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
+<hr class="blog-hr" />
+
+<div class="blog-content">
+  <%= sanitize(@blog.content) %>
+</div>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
