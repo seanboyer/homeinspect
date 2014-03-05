@@ -5,8 +5,13 @@ gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+
+# gems added manually
 gem 'simple_form'
 gem 'backstretch-rails'
+### end of gems added manually
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

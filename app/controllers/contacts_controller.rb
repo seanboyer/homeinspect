@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to pages_home_path, notice: 'Contact was successfully created.' }
+        format.html { redirect_to contact_confirmation_path, notice: 'Contact was successfully created.' }
         format.json { render action: 'show', status: :created, location: @contact }
       else
         format.html { render action: 'new' }

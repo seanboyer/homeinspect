@@ -8,6 +8,7 @@ Homeinspect::Application.routes.draw do
   get "pages/services"
   
   resources :contacts
+  get "contacts/confirmation"
 
   root to: "pages#home"
 
