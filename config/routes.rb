@@ -3,12 +3,15 @@ Homeinspect::Application.routes.draw do
 
   get "pages/home"
   get "pages/about"
-  get "pages/confirmation"
   get "pages/faq"
   get "pages/services"
   
-  resources :contacts
-  get "contacts/confirmation"
+
+  resources :contacts do
+    member do
+      get 'confirmation'
+    end
+  end
 
   root to: "pages#home"
 

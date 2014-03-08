@@ -12,8 +12,9 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to contact_confirmation_path, notice: 'Contact was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @contact }
+        format.html { redirect_to confirmation_contact_path(@contact), notice: 'Contact was successfully created.' }
+        format.json { render action: 'confirmation', status: :created, location: @contact }
+        
       else
         format.html { render action: 'new' }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
@@ -21,6 +22,13 @@ class ContactsController < ApplicationController
     end
   end
 
+  #def show
+  #  @contact=Contact.find(params[:id])
+  #end
+
+  def confirmation
+    @contact=Contact.find(params[:id])
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
