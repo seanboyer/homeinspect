@@ -1,0 +1,21 @@
+<h2 class="text-center sign-up-header">Sign up</h2>
+
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+	<%= f.input :first_name, :required => true, :autofocus => true, input_html: { class: 'col-md-5' }, label_html: { class: 'sign-up-label' } %>
+	<%= f.input :last_name, :required => true, input_html: { class: 'col-md-5' }, label_html: { class: 'sign-up-label' }  %>
+    <%= f.input :email, :required => true, input_html: { class: 'col-md-5' }, label_html: { class: 'sign-up-label' }  %>
+    <%= f.input :password, :required => true, input_html: { class: 'col-md-5' }, label_html: { class: 'sign-up-label' }  %>
+    <%= f.input :password_confirmation, :required => true, input_html: { class: 'col-md-5' }, label_html: { class: 'sign-up-label' }  %>
+  </div>
+
+  <div class="form-actions">
+  	<br />
+    <%= f.button :submit, "Sign up", :class => 'btn btn-default btn-lg sign-up-btn' %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

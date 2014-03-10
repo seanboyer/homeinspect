@@ -10,6 +10,7 @@ gem 'sqlite3'
 # gems added manually
 gem 'simple_form'
 gem 'backstretch-rails'
+gem 'devise'
 ### end of gems added manually
 
 

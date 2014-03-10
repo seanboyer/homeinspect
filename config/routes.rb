@@ -1,4 +1,5 @@
 Homeinspect::Application.routes.draw do
+  devise_for :users
   resources :blogs
 
   get "pages/home"

@@ -113,3 +113,27 @@ label.collection_radio_buttons {
 	background-color: grey;
 	height: 2px;
 }
+
+
+p.notice {
+	padding: 0px;
+	margin: 0px;
+}
+
+p.alert {
+	padding: 0px;
+	margin: 0px;
+}
+
+.simple_form label {
+	width: 200px;
+	padding-bottom: 15px;
+}
+
+.sign-up-header {
+	padding-bottom: 25px;
+}
+
+.sign-up-btn {
+	margin-top: 10px;
+}
