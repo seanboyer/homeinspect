@@ -39,6 +39,18 @@
           <%= link_to "Blog", blogs_path %>
         </li>
       </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li class="nav-link pull-right">
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+          </li>
+        <% else %>
+          <li class="nav-link pull-right">
+          <%= link_to('Login', new_user_session_path)  %>  
+          </li>
+        <% end %>
+      </ul>
     </nav>
   </div>
 </header>
@@ -47,29 +59,53 @@
     <div class="container">
         <div class="pull-right logo-pic"><%= image_tag("northwest-home-inspection-logo.jpg", :alt => "northwest home inspection logo") %></div>
         <h1>Northwest Premier Home Inspections, LLC</h1>
-       <p>Trust your home inspection to a team which averages 15 years of residential construction experience.  Our licensed home inspectors provide inspections throughout the Puget Sound, serving King, Pierce, and Snohomish Counties. Let our experience provide peace of mind for your most important purchase.</p>
+       <p>Trust your home inspection to an inspector with 15 years of residential construction experience.  We offer inspections throughout the Puget Sound, serving King, Pierce, and Snohomish Counties. Let our experience provide peace of mind for your most important purchase.</p>
     </div>
 </div>
 
 <div class="container bs-docs-container">
     <div class="row">
-        <div class="col-md-1">
-        	
-		</div>
-        <div class="col-md-9" role="main">
-          
+      <div class="col-md-1">
+      </div>
+    
+      <div class="col-md-9" role="main">
           <div class="devise-alerts">
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
           </div>
 
         	<%= yield %>
-		</div>
+
+  		</div>
+  
     	<div class="col-md-2 phone-number">
     		<h3>To schedule an inspection or simply ask a question, please call 206-462-8483</h3>
     	</div>
+
+      <div id="popover-container">
+        <button id="guarantee-popover" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="The time constraints of buying and selling real estate can be stressful! We can help. With our 48 Hour Guarantee, we promise to complete your home or building inspection within 48 Hours of getting in contact with you or you’ll get a $50 discount. Contact today: 206-462-8483.">
+          48 Hour Guarantee
+        </button>
+      </div>
+      
+      <script type="text/javascript">
+        $(document).ready(function()
+        {
+          $('#guarantee-popover').popover(
+          {
+             trigger: 'click',
+             html: true,
+             placement: 'left',
+             container: '#popover-container',
+          });
+        });
+      </script>
+
 	</div>
+
 </div>
+
+
 
 <div class="container">
 	<div class="row">

@@ -137,3 +137,11 @@ p.alert {
 .sign-up-btn {
 	margin-top: 10px;
 }
+
+/*.checkbox_container label {
+  display: inline;
+ }*/
+
+ #guarantee-popover {
+ 	margin-top: 20px;
+ }

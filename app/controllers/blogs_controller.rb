@@ -1,6 +1,10 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authorize, :except => [:index, :show]
+
+
+
   # GET /blogs
   # GET /blogs.json
   def index
@@ -14,6 +18,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
+    before_filter :authenticate_user!
     @blog = Blog.new
   end
 
@@ -71,4 +76,9 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :author, :content)
     end
+
+    def authorize
+    #Your code to get a logged in user
+    redirect_to blog_path unless user_signed_in?
+end
 end
