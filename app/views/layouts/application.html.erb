@@ -83,7 +83,7 @@
     	</div>
 
       <div id="popover-container">
-        <button id="guarantee-popover" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="The time constraints of buying and selling real estate can be stressful! We can help. With our 48 Hour Guarantee, we promise to complete your home or building inspection within 48 Hours of getting in contact with you or you’ll get a $50 discount. Contact today: 206-462-8483.">
+        <button id="guarantee-popover" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="The time constraints of buying and selling real estate can be stressful! We can help. With our <em>48 Hour Guarantee</em>, we promise to complete your home or building inspection within 48 hours of getting in contact with you or you’ll get a $50 discount. Contact today: 206-462-8483.">
           48 Hour Guarantee
         </button>
       </div>
@@ -97,6 +97,8 @@
              html: true,
              placement: 'left',
              container: '#popover-container',
+             title : '<span class="text-info"><strong>48 Hr Guarantee</strong></span>'+
+                '<button type="button" id="close" class="close" onclick="$(&quot;#guarantee-popover&quot;).popover(&quot;hide&quot;);">&times;</button>'
           });
         });
       </script>

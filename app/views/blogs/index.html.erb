@@ -9,17 +9,24 @@
         <em>Posted by: <%= blog.author + " - " + blog.created_at.strftime("%b #{blog.created_at.day.ordinalize}, %Y") %></em>
       </div>
 
-      <hr class="blog-hr" />
+
 
       <div class="blog-content">
         <%= sanitize(blog.content) %>
       </div>
 
-      <% if user_signed_in? %>
-      <td><%= link_to 'Show', blog %></td>
-      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-      <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% if current_user.try(:admin?) %>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td> | 
+      <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td> | 
+      <td><%= link_to 'New', new_blog_path %></td>
       <% end %>
+
+      <hr class="blog-hr" />
+      
+
+
     <% end %>
+
+    <%= will_paginate @blogs, :previous_label => 'Newer', :next_label => 'Older' %>
 
 <br />

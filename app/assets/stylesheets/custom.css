@@ -112,6 +112,8 @@ label.collection_radio_buttons {
 	border-color: grey;
 	background-color: grey;
 	height: 2px;
+	margin-top: 30px;
+	margin-bottom: 40px;
 }
 
 
@@ -144,4 +146,8 @@ p.alert {
 
  #guarantee-popover {
  	margin-top: 20px;
+ }
+
+ .text-info {
+ 	color: grey;
  }

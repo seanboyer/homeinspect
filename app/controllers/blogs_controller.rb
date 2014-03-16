@@ -8,7 +8,9 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    #@blogs = Blog.paginate(:page => params[:page])
+    @blogs = Blog.order('created_at DESC').page(params[:page])
+    #@blogs = Blog.all
   end
 
   # GET /blogs/1
@@ -18,7 +20,6 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
-    before_filter :authenticate_user!
     @blog = Blog.new
   end
 
@@ -30,6 +31,9 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
+    @blog.user = current_user
+    #@blog.author = @blog.user.first_name + " " +@blog.user.last_name
+    @blog.author = @blog.user.full_name
 
     respond_to do |format|
       if @blog.save
@@ -78,7 +82,6 @@ class BlogsController < ApplicationController
     end
 
     def authorize
-    #Your code to get a logged in user
-    redirect_to blog_path unless user_signed_in?
-end
+      redirect_to blogs_path unless current_user.try(:admin?)
+    end
 end

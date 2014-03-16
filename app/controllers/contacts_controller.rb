@@ -1,6 +1,9 @@
 class ContactsController < ApplicationController
+
+  before_filter :authorize, :except => [:new, :create, :confirmation]
+
   def index
-  	@contacts = Contact.all
+  	@contacts = Contact.all( :order => "created_at DESC")
   end
 
   def new
@@ -22,9 +25,9 @@ class ContactsController < ApplicationController
     end
   end
 
-  #def show
-  #  @contact=Contact.find(params[:id])
-  #end
+  def show
+    @contact=Contact.find(params[:id])
+  end
 
   def confirmation
     @contact=Contact.find(params[:id])
@@ -39,5 +42,9 @@ class ContactsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def status_params
       params.require(:contact).permit(:name, :email, :phone, :additional_information)
+    end
+
+    def authorize
+      redirect_to blogs_path unless current_user.try(:admin?)
     end
 end

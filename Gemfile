@@ -11,6 +11,7 @@ gem 'sqlite3'
 gem 'simple_form'
 gem 'backstretch-rails'
 gem 'devise'
+gem 'will_paginate', '~> 3.0'
 ### end of gems added manually
 
 
