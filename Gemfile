@@ -12,6 +12,7 @@ gem 'simple_form'
 gem 'backstretch-rails'
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
+gem 'friendly_id'
 ### end of gems added manually
 
 
