@@ -51,6 +51,9 @@ group :production do
 	gem 'rails_12factor'
 end
 
+gem 'unicorn'
+
+
 ruby "2.0.0"
 
 
