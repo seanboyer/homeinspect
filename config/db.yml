@@ -1,0 +1,11 @@
+development:
+  username: postgres
+  password: test
+
+test:
+  username: postgres
+  password: test
+
+production:
+  username: 23456
+  password: bcdefg

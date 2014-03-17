@@ -3,16 +3,20 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 
 # gems added manually
-gem 'simple_form'
-gem 'backstretch-rails'
-gem 'devise'
-gem 'will_paginate', '~> 3.0'
-gem 'friendly_id'
+	# Use postgres as the database for Active Record instead of sqlite3. Change is for Heroku hosting
+	gem 'pg'
+	#replaces form functionality
+	gem 'simple_form'
+	#used to create stretched image for page background
+	gem 'backstretch-rails'
+	#used for user authentication, currently not open to public
+	gem 'devise'
+	#used for blog pagination
+	gem 'will_paginate', '~> 3.0'
+	#used for blog slugs
+	gem 'friendly_id'
 ### end of gems added manually
 
 
@@ -41,6 +45,14 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# for heroku
+group :production do
+	gem 'rails_12factor'
+end
+
+ruby "2.0.0"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
