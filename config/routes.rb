@@ -6,6 +6,12 @@ Homeinspect::Application.routes.draw do
   get "pages/about"
   get "pages/faq"
   get "pages/services"
+  get "pages/complete_inspection"
+  get "pages/pre_offer_inspection"
+  get "pages/home_consultation"
+  get "pages/realtors"
+  get "pages/sellers"
+  get "pages/new_construction"
   
 
   resources :contacts do

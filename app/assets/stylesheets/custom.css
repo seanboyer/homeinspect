@@ -144,10 +144,29 @@ p.alert {
   display: inline;
  }*/
 
- #guarantee-popover {
- 	margin-top: 20px;
- }
+#guarantee-popover {
+	margin-top: 20px;
+}
 
- .text-info {
- 	color: grey;
- }
+.text-info {
+	color: grey;
+}
+
+a:link {color: grey;}      /* unvisited link */
+a:visited {color: grey;}  /* visited link */
+
+.inspector-img {
+	margin-right: 40px;
+}
+
+.ul-skills {
+	padding-left: 275px;
+}
+
+.sub-heading {
+	padding-top: 30px;
+}
+
+.btn-pad-top {
+	margin-top: 30px;	
+}
