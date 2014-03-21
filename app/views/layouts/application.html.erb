@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HomeInspect</title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -27,13 +27,13 @@
           <%= link_to "Contact", new_contact_path %>          
         </li>
         <li class="nav-link">
-          <%= link_to "Services", pages_services_path %>
+          <%= link_to "Services", services_path %>
         </li>
         <li class="nav-link">
-          <%= link_to "About", pages_about_path %>
+          <%= link_to "About", about_path %>
         </li>
         <li class="nav-link">
-          <%= link_to "FAQ", pages_faq_path %>
+          <%= link_to "FAQ", faq_path %>
         </li>
         <li class="nav-link">
           <%= link_to "Blog", blogs_path %>
@@ -68,7 +68,7 @@
       <div class="col-md-1">
       </div>
     
-      <div class="col-md-9" role="main">
+      <div class="col-md-8" role="main">
           <div class="devise-alerts">
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
@@ -78,30 +78,40 @@
 
   		</div>
   
-    	<div class="col-md-2 phone-number">
-    		<h3>To schedule an inspection or simply ask a question, please call 206-462-8483</h3>
+    	
+      <div class="col-md-3">
+ 
+
+
+
+        <div class="row">	
+          <div class="col-md-12 phone-number">
+          <h3 class="phone-box">To schedule an inspection or simply ask a question, please call: 206&#8209;462&#8209;8483</h3>
+          </div>
+        </div>
+
+
+        <div class="row"> 
+          <div id="popover-container" class="col-md-4 col-md-offset-2">
+            
+            <button id="guarantee-popover" type="button" class="btn btn-default" data-content="The time constraints of buying and selling real estate can be stressful! We can help. With our <em>48 Hour Guarantee</em>, we promise to complete your home or building inspection within 48 hours of getting in contact with you or you’ll get a $50 discount. Contact today: 206&#8209;462&#8209;8483.">
+              48 Hour Guarantee
+            </button>
+            
+          </div>
+          
+        </div>
+
+ 
+
+
+
+
+
     	</div>
 
-      <div id="popover-container">
-        <button id="guarantee-popover" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="The time constraints of buying and selling real estate can be stressful! We can help. With our <em>48 Hour Guarantee</em>, we promise to complete your home or building inspection within 48 hours of getting in contact with you or you’ll get a $50 discount. Contact today: 206-462-8483.">
-          48 Hour Guarantee
-        </button>
-      </div>
       
-      <script type="text/javascript">
-        $(document).ready(function()
-        {
-          $('#guarantee-popover').popover(
-          {
-             trigger: 'click',
-             html: true,
-             placement: 'left',
-             container: '#popover-container',
-             title : '<span class="text-info"><strong>48 Hr Guarantee</strong></span>'+
-                '<button type="button" id="close" class="close" onclick="$(&quot;#guarantee-popover&quot;).popover(&quot;hide&quot;);">&times;</button>'
-          });
-        });
-      </script>
+
 
 	</div>
 
@@ -118,6 +128,21 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function()
+    {
+      $('#guarantee-popover').popover(
+        {
+           trigger: 'click',
+           html: true,
+           placement: 'left',
+           container: '#guarantee-popover',
+           title : '<span class="guarantee-title"><strong>48 Hr Guarantee</strong></span>'+
+              '<button type="button" id="close" class="close" onclick="$(&quot;#guarantee-popover&quot;).popover(&quot;hide&quot;);">&times;</button>'
+        });
+      });
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function() {

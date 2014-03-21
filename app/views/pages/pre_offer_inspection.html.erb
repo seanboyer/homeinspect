@@ -1,4 +1,5 @@
-<%= button_to "<< Back", pages_services_path, method: :get, :class => 'btn btn-default btn-pad-top' %>
+<% content_for :title, "NWInspect - Pre-offer Inspections" %>
+<%= button_to "<< Back", services_path, method: :get, :class => 'btn btn-default btn-pad-top' %>
 <h1>Pre-Offer Home Inspections in Western Washington</h1>
 <h3>Performing expert pre-offer home inspections in King, Pierce, Snohomish and Thurston Counties</h3>
 
@@ -7,6 +8,6 @@
 <h3>Why get a Pre-Offer Inspection?</h3>
 <p>Simple. Getting a deeper understanding of a home’s major systems, general upkeep, and potential problems, will help you make informed offers.</p>
 
-<p>Informed offers means less time and money tied up in houses that you’re ultimately going to walk away from after a <%= link_to "complete inspection", pages_complete_inspection_path %>. <%= link_to "Contact", new_contact_path %> Northwest Premier Home inspections to schedule a pre-offer home inspection for some time in the next 48 hours.</p>
+<p>Informed offers means less time and money tied up in houses that you’re ultimately going to walk away from after a <%= link_to "complete inspection", services_complete_inspection_path %>. Contact Northwest Premier Home inspections to <%= link_to "schedule", new_contact_path %> a pre-offer home inspection for some time in the next 48 hours.</p>
 
 <p>We proudly serve: the greater Seattle, Bellevue, Everett, Bothell, Renton, Kirkland, Redmond, Woodinville, Kent, Federal Way,Tacoma, Puyallup and Olympia areas.</p>

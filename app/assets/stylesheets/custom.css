@@ -1,3 +1,9 @@
+/* site-wide  */
+
+
+
+/* Home page and site-wide */
+
 .bs-docs-header {
 	background-color: #505050;
 	color: white;
@@ -38,7 +44,23 @@ li.nav-link a {
 	padding-left: 20px;
 }
 
+#guarantee-popover {
+	margin-top: 20px;
+}
 
+.phone-box {
+	padding: 20px 0px 20px 15px;
+}
+
+a:link {color: grey;}      /* unvisited link */
+a:visited {color: grey;}  /* visited link */
+
+.guarantee-title {
+	color: grey;
+}
+
+
+/* Forms styling */
 
 /* simple form styling */
 .simple_form div.input {
@@ -80,9 +102,12 @@ label.collection_radio_buttons {
 }
 
 .section-heading {
+	padding-top: 25px;
 	padding-bottom: 30px;
 }
 
+
+/* FAQ */
 .question p{
 	padding-left: 10px;
 	font-size: 1.5em;
@@ -94,6 +119,8 @@ label.collection_radio_buttons {
 	font-style: italic;
 	padding-bottom: 20px;
 }
+
+/* Blog */
 
 .blog-title {
 
@@ -116,7 +143,7 @@ label.collection_radio_buttons {
 	margin-bottom: 40px;
 }
 
-
+/* Keep devise alerts from changing layout of pages */
 p.notice {
 	padding: 0px;
 	margin: 0px;
@@ -128,7 +155,7 @@ p.alert {
 }
 
 .simple_form label {
-	width: 200px;
+	width: 100px;
 	padding-bottom: 15px;
 }
 
@@ -140,20 +167,20 @@ p.alert {
 	margin-top: 10px;
 }
 
-/*.checkbox_container label {
-  display: inline;
- }*/
 
-#guarantee-popover {
-	margin-top: 20px;
+/*
+#popover-container {
+	padding-top: 10px;
+}
+*/
+
+.center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.text-info {
-	color: grey;
-}
 
-a:link {color: grey;}      /* unvisited link */
-a:visited {color: grey;}  /* visited link */
 
 .inspector-img {
 	margin-right: 40px;

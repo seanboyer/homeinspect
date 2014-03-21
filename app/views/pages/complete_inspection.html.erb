@@ -1,4 +1,5 @@
-<%= button_to "<< Back", pages_services_path, method: :get, :class => 'btn btn-default btn-pad-top' %>
+<% content_for :title, "NWInspect - Complete Inspection" %>
+<%= button_to "<< Back", services_path, method: :get, :class => 'btn btn-default btn-pad-top' %>
 <h1>Complete Home Inspection Service for Buyers<h1>
 
 <p>Our complete, 400-item home inspection for buyers will give you great working knowledge of the house on which you’ve made an offer. All offers are contingent on inspection, which means if you find things you can’t live with, you can reduce your asking price in consultation with your realtor or walk away entirely.</p>
@@ -38,6 +39,6 @@
 <li>Chimney</li>
 </ul>
 
-<p>And don’t forget that a complete home inspection is your opportunity to ask your questions and “kick the tires” on your new home. Our <%= link_to "AHIT certified inspector", pages_faq_path( :anchor => "AHIT") %> will take the time to explain how to maintain and upgrade your home. </p>
+<p>And don’t forget that a complete home inspection is your opportunity to ask your questions and “kick the tires” on your new home. Our <%= link_to "AHIT certified inspector", faq_path( :anchor => "AHIT") %> will take the time to explain how to maintain and upgrade your home. </p>
 
 <p><%= link_to "Contact", new_contact_path %> Northwest Premier Home Inspections to set up your complete home inspection in the greater Seattle, Bellevue, Everett, Bothell, Renton, Kirkland, Redmond, Woodinville, Kent, Federal Way, Tacoma, Puyallup or Olympia areas.</p>

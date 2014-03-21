@@ -2,16 +2,24 @@ Homeinspect::Application.routes.draw do
   devise_for :users
   resources :blogs
 
-  get "pages/home"
-  get "pages/about"
-  get "pages/faq"
-  get "pages/services"
-  get "pages/complete_inspection"
-  get "pages/pre_offer_inspection"
-  get "pages/home_consultation"
-  get "pages/realtors"
-  get "pages/sellers"
-  get "pages/new_construction"
+  #get "pages/faq"
+  #get "pages/services"
+  #get "pages/complete_inspection"
+  #get "pages/pre_offer_inspection"
+  #get "pages/home_consultation"
+  #get "pages/realtors"
+  #get "pages/sellers"
+  #get "pages/new_construction"
+
+  match '/faq' => 'pages#faq', via: [:get]
+  match '/about' => 'pages#about',  via: [:get]
+  match '/services' => 'pages#services',  via: [:get]
+  match 'services/complete_inspection' => 'pages#complete_inspection',  via: [:get]
+  match 'services/pre_offer_inspection' => 'pages#pre_offer_inspection',  via: [:get]
+  match 'services/home_consultation' => 'pages#home_consultation',  via: [:get]
+  match 'services/realtors' => 'pages#realtors',  via: [:get]
+  match 'services/sellers' => 'pages#sellers',  via: [:get]
+  match 'services/new_construction' => 'pages#new_construction',  via: [:get]
   
 
   resources :contacts do
